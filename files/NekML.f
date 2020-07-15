@@ -4,55 +4,42 @@ c
 c Interface for Nek5000 machine learning (ML) applications.
 c
 c---------------------------------------------------------------------
-
-c---------------------------------------------------------------------
-c NekML_test
+c NekML_savevx2h5
 c
-c test subroutine
+c save vx to a .h5 file, serves as an example for than anything
+c - to modify, just change ndarray_create(arr,___) variable
+c - change args1%setitem(2, "___") string
 c
 c---------------------------------------------------------------------
-      subroutine NekML_test
+      subroutine NekML_savevx2h5(isaveh5)
 
       use forpy_mod
-
       include 'SIZE'
       include 'SOLN'
       include 'TSTEP'
     
-      integer         :: ierror,Nuse
+      integer         :: ierror
       type(tuple)     :: args1
       type(module_py) :: mymodule
       type(list)      :: paths
-      type(ndarray)   :: arr_ux, arr_uy
-
-c     start NekML portion
+      type(ndarray)   :: arr
 
       ierror = forpy_initialize()
-      ierror = ndarray_create(arr_ux, vx)
-      ierror = ndarray_create(arr_uy, vy)
-
-c     add the current directory "." to PYTHONPATH
+      ierror = ndarray_create(arr,vx)
+c add directory with NekML Python modules to PYTHONPATH
       ierror = get_sys_path(paths)
-      ierror = paths%append(".")
+      ierror = paths%append("NekML_PyMods")
+      ierror = import_py(mymodule, "NekML")
 
-c     import python function
-      ierror = import_py(mymodule, "save_h5py")
+c set arguments 
+      ierror = tuple_create(args1, 3)
+      ierror = args1%setitem(0, arr)
+      ierror = args1%setitem(1, istep)
+      ierror = args1%setitem(2, "vx")
+
+
+      ierror = call_py_noret(mymodule, "saveh5py",args1)
+
+      call args1%destroy
       
-c     set arguments 
-      ierror = tuple_create(args1, 4)
-      ierror = args1%setitem(0, arr_ux)
-      ierror = args1%setitem(1, arr_uy)
-      ierror = args1%setitem(2, istep)
-      Nuse   = 0
-      ierror = args1%setitem(3, Nuse)
-
-      if (mod(istep,200) == 0) then
-          ierror = call_py_noret(mymodule, "saveh5py",args1)
-          Nuse = Nuse + 1
-      end if
-
-c     end NekML portion
-
-      write(*,*) "in NekML_test"
-
       end

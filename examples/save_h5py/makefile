@@ -1,4 +1,4 @@
-### makefile automatically created by makenek 07/15/2020 15:03:57 ###
+### makefile automatically created by makenek 07/15/2020 15:18:29 ###
 BINNAME=nek5000
 LIBNAME=libnek5000.a
 CASENAME:=ext_cyl
