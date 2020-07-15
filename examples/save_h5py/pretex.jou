@@ -1,0 +1,231 @@
+ NEKTON Version   2.6                                                                                                               
+ Choose a Name for This Session:
+  Beginning Session new                                                                                                             
+   1 READ PREVIOUS PARAMETERS 
+   2 TYPE IN  NEW  PARAMETERS 
+   3 CONJ. HEAT TRANSFER MERGE
+Choose item:
+ Enter name of previous session
+   1 BUILD FROM FILE          
+   2 BUILD INTERACTIVELY      
+Choose item:
+ Enter name of previous session
+(Default= box.rea          )
+ Will Read Mesh and B.C. data from  box.rea          
+     Reading Element      29   [    1C]
+     Reading Element      58   [    1f]
+     Reading Element      87   [    1I]
+     Reading Element     116   [    1l]
+     Reading Element     145   [    1O]
+     Reading Element     174   [    1r]
+     Reading Element     203   [    1U]
+     Reading Element     232   [    1x]
+     Reading Element     261   [    1a]
+     Reading Element     290   [    1D]
+     Reading Element     319   [    1g]
+     Reading Element     348   [    1J]
+     Reading Element     377   [    1m]
+     Reading Element     406   [    1P]
+     Reading Element     435   [    1s]
+     Reading Element     464   [    1V]
+     Reading Element     493   [    1y]
+     Reading Element     522   [    1b]
+     Reading Element     551   [    1E]
+     Reading Element     580   [    1h]
+     Reading Element     609   [    1K]
+     Reading Element     638   [    1n]
+     Reading Element     667   [    1Q]
+     Reading Element     696   [    1t]
+     Reading Element     725   [    1W]
+     Reading Element     754   [    1z]
+     Reading Element     783   [    1c]
+     Reading Element     812   [    1F]
+     Reading Element     841   [    1i]
+     Reading Element     870   [    1L]
+     Reading Element     899   [    1o]
+     Reading Element     928   [    1R]
+     Reading Element     957   [    1u]
+     Reading Element     986   [    1X]
+     Reading Element    1015   [    1A]
+     Reading Element    1044   [    1d]
+     Reading Element    1073   [    1G]
+     Reading Element    1102   [    1j]
+     Reading Element    1131   [    1M]
+     Reading Element    1160   [    1p]
+     Reading Element    1189   [    1S]
+     Reading Element    1218   [    1v]
+     Reading Element    1247   [    1Y]
+     Reading Element    1276   [    1B]
+     Reading Element    1305   [    1e]
+     Reading Element    1334   [    1H]
+     Reading Element    1363   [    1k]
+     Reading Element    1392   [    1N]
+     Reading Element    1421   [    1q]
+     Reading Element    1450   [    1T]
+Showing only nelcap elements of         1456
+                    *** BUILD MENU ***
+   1 END    ELEMENTS          
+   2 MODIFY ELEMENT           
+   3 GLOBAL REFINE            
+   4 CURVE SIDES              
+   5 DELETE ELEMENT           
+   6 ZOOM                     
+   7 SET GRID                 
+   8 DEFINE OBJECT            
+   9 REDRAW MESH              
+  10 IMPORT MESH              
+  11 IMPORT VTK MESH          
+  12 IMPORT vtx MESH          
+  13 REFLECT MESH             
+  14 SAVE                     
+  15 UNDO                     
+Choose item:
+input name of new .rea file
+Displace elements in box (y)? Translate?(t) n
+  ***** FLUID   BOUNDARY CONDITIONS *****
+ X min/max of new elements:  -1.200000       1.200001    
+ Y min/max of new elements:  -1.200000       1.200000    
+ Deleting element      514 of     1536.
+ Deleting element      515 of     1536.
+ Deleting element      516 of     1536.
+ Deleting element      517 of     1536.
+ Deleting element      518 of     1536.
+ Deleting element      519 of     1536.
+ Deleting element      520 of     1536.
+ Deleting element      521 of     1536.
+ Deleting element      570 of     1536.
+ Deleting element      571 of     1536.
+ Deleting element      572 of     1536.
+ Deleting element      573 of     1536.
+ Deleting element      574 of     1536.
+ Deleting element      575 of     1536.
+ Deleting element      576 of     1536.
+ Deleting element      577 of     1536.
+ Deleting element      626 of     1536.
+ Deleting element      627 of     1536.
+ Deleting element      628 of     1536.
+ Deleting element      629 of     1536.
+ Deleting element      630 of     1536.
+ Deleting element      631 of     1536.
+ Deleting element      632 of     1536.
+ Deleting element      633 of     1536.
+ Deleting element      682 of     1536.
+ Deleting element      683 of     1536.
+ Deleting element      684 of     1536.
+ Deleting element      685 of     1536.
+ Deleting element      686 of     1536.
+ Deleting element      687 of     1536.
+ Deleting element      688 of     1536.
+ Deleting element      689 of     1536.
+ Deleting element      738 of     1536.
+ Deleting element      739 of     1536.
+ Deleting element      740 of     1536.
+ Deleting element      741 of     1536.
+ Deleting element      742 of     1536.
+ Deleting element      743 of     1536.
+ Deleting element      744 of     1536.
+ Deleting element      745 of     1536.
+ Deleting element      794 of     1536.
+ Deleting element      795 of     1536.
+ Deleting element      796 of     1536.
+ Deleting element      797 of     1536.
+ Deleting element      798 of     1536.
+ Deleting element      799 of     1536.
+ Deleting element      800 of     1536.
+ Deleting element      801 of     1536.
+ Deleting element      850 of     1536.
+ Deleting element      851 of     1536.
+ Deleting element      852 of     1536.
+ Deleting element      853 of     1536.
+ Deleting element      854 of     1536.
+ Deleting element      855 of     1536.
+ Deleting element      856 of     1536.
+ Deleting element      857 of     1536.
+ Deleting element      906 of     1536.
+ Deleting element      907 of     1536.
+ Deleting element      908 of     1536.
+ Deleting element      909 of     1536.
+ Deleting element      910 of     1536.
+ Deleting element      911 of     1536.
+ Deleting element      912 of     1536.
+ Deleting element      913 of     1536.
+   1 END    ELEMENTS          
+   2 MODIFY ELEMENT           
+   3 GLOBAL REFINE            
+   4 CURVE SIDES              
+   5 DELETE ELEMENT           
+   6 ZOOM                     
+   7 SET GRID                 
+   8 DEFINE OBJECT            
+   9 REDRAW MESH              
+  10 IMPORT MESH              
+  11 IMPORT VTK MESH          
+  12 IMPORT vtx MESH          
+  13 REFLECT MESH             
+  14 SAVE                     
+  15 UNDO                     
+Choose item:
+   1 ACCEPT MATL,QVOL         
+   2 SELECT ELEMENT           
+   3 SELECT MATL [ 11]        
+   4 SET  MATL PROPS,Q        
+   5 SHOW MATL PROPS,Q        
+Choose item:
+              *** MIDWAY BREAK MENU ***
+ABORT to write build data to file and exit
+SET B.C'S to continue
+   1 SET BCs                  
+   2 ABORT                    
+Choose item:
+                   *** BOUNDARY CONDITION MENU ***
+Begin Inputting Fluid Boundary Conditions
+ B.C.>         1         1
+   1 PERIODIC-AUTO            
+   2 PERIODIC                 
+   3 WALL                     
+   4 VELOCITY                 
+   5 OUTFLOW                  
+   6 OUTFLOW/N                
+   7 VELOCITY (LOCAL)         
+   8 SYMMETRY                 
+   9 MOVING WALL              
+  10 MELTING FRONT            
+  11 SET ENTIRE LEVEL         
+  12 ZOOM                     
+Choose item:
+Choose B.C.'s for all remaining sides in entire level
+   1 PERIODIC-AUTO            
+   2 PERIODIC                 
+   3 WALL                     
+   4 VELOCITY                 
+   5 OUTFLOW                  
+   6 OUTFLOW/N                
+   7 VELOCITY (LOCAL)         
+   8 SYMMETRY                 
+   9 MOVING WALL              
+  10 MELTING FRONT            
+  11 SET ENTIRE LEVEL         
+  12 ZOOM                     
+Choose item:
+Is this a lattice for hex-close-packed spheres?:
+   1 END  LEVEL               
+   2 MODIFY B.C.              
+   3 SHOW   B.C.              
+   4 INTERNAL B.C.            
+   5 ZOOM                     
+Choose item:
+   1 ACCEPT B.C.'s            
+   2 REVIEW/MODIFY            
+Choose item:
+Curve side consistency check OK.
+ Generating Mesh Points for      1472  Elements
+   1 EXIT                     
+   2 OUTPUT                   
+   3 DRIVE FORCE              
+   4 INITIAL COND             
+   5 INTEGRAL QUANTITY        
+   6 OBJECT                   
+   7 ZOOM                     
+Choose item:
+Writing Parameters to file
+Deleting tmp.* files.
