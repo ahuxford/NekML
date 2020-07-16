@@ -25,7 +25,7 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 
 4) Whenever using NekML, a copy of the provided "makefile_usr.inc" file located in NekML's 'files' directory must be in the directory you want to run Nek5000 in. For example, 'examples/save_h5py' contains the "makefile_usr.inc".
 
-5) When you run "makenek" you'll need to run it twice (i.e. run make clean, makenek, makenek) to complete the compilation of Nek5000 with NekML.
+5) When you run "makenek" you may need to run it up to 3 times (i.e. run make clean, makenek, makenek, makenek) to complete the compilation of Nek5000 with NekML. There's a compilation bug that's a minor inconvenience.
 
 ## Examples
 
@@ -33,6 +33,6 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 - This example follows the `ext_cyl` example included with Nek5000. Here, we actively pull a velocity field on-the-fly from Nek5000 and call a Python function that writes the field to a h5 file using h5py.
 
 `serial_train`
-- This example follows the `ext_cyl` example included with Nek5000, but with an example on-the-fly training of a neural network. The goal of the network is to predict each node's y-velocity using only the local x-velocity as an input.
-- The network is trained on-the-fly, using live simulation data from every timestep within the simulation- This example of on-the-fly training negates the large data space needed for saving every timestep's solution data, which would be needed for the conventional, post-simulation training of a neural network. 
-
+- This example follows the `ext_cyl` example included with Nek5000, but with an example on-the-fly training of a neural network. The goal of the network is to predict each node's y-velocity using only the local x-velocity as an input. The network is trained on-the-fly, using live simulation data from every timestep within the simulation.
+- This example of on-the-fly training negates the large data space needed for saving every timestep's solution data, which would be needed for the conventional, post-simulation training of a neural network. 
+- To visualize the model's loss versus epoch, run the provided "plotloss.py" script.
