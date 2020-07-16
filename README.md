@@ -11,7 +11,7 @@ NekML is currently for serial Nek5000 simulations only, but parallelism is being
 
 ## Getting Started
 
-1) Install Python 3.X along with the numpy, matplotlib, and h5py modules. Avoid using an Anaconda environment as it will cause compilation bugs.
+1) Install Python 3.X along with the numpy, matplotlib, h5py, and pytorch modules. Avoid using an Anaconda environment as it will cause compilation bugs.
 
 2) Add the following USR and USR_LFLAGS lines to your local Nek5000 installation's "makenek" file, which is located within your local Nek5000's 'bin' directory.
 
