@@ -11,9 +11,9 @@ NekML is currently for serial Nek5000 simulations only, but parallelism is being
 
 ## Getting Started
 
-1) Install Python 3.XX and pip3 install numpy and h5py. Avoid using an Anaconda environment as it will cause compilation bugs/issues to emerge.
+1) Install Python 3.X and pip3 install numpy and h5py. Avoid using an Anaconda environment as it will cause compilation bugs.
 
-2) Add the following USR and USR_LFLAGS lines to your local Nek5000 installation's "makenek" file within your local Nek5000's 'bin' directory.
+2) Add the following USR and USR_LFLAGS lines to your local Nek5000 installation's "makenek" file, which is located within your local Nek5000's 'bin' directory.
 
 USR+="NekML.o forpy_mod.o"
 
@@ -23,12 +23,16 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 
 3) Copy the forpy_mod.F90 file from NekML's 'files' directory to your local Nek5000 installation's 'core/3rd_party' directory.
 
-4) Whenever using NekML, a copy of the provided "makefile_usr.inc" file located in NekML's 'files' directory must be in the run's directory . For example, 'examples/ext_cyl' contains "makefile_usr.inc" because it is a Nek5000 run directory that uses NekML.
+4) Whenever using NekML, a copy of the provided "makefile_usr.inc" file located in NekML's 'files' directory must be in the directory you want to run Nek5000 in. For example, 'examples/save_h5py' contains the "makefile_usr.inc".
 
-
-5) When you run "makenek" you'll need to run it twice to complete the compilation of Nek5000 with NekML.
+5) When you run "makenek" you'll need to run it twice (i.e. run make clean, makenek, makenek) to complete the compilation of Nek5000 with NekML.
 
 ## Examples
 
 `save_h5py`
 - This example follows the `ext_cyl` example included with Nek5000. Here, we actively pull a velocity field on-the-fly from Nek5000 and call a Python function that writes the field to a h5 file using h5py.
+
+`serial_train`
+- This example follows the `ext_cyl` example included with Nek5000, but with an example on-the-fly training of a neural network. The goal of the network is to predict each node's y-velocity using only the local x-velocity as an input.
+- The network is trained on-the-fly, using live simulation data from every timestep within the simulation- This example of on-the-fly training negates the large data space needed for saving every timestep's solution data, which would be needed for the conventional, post-simulation training of a neural network. 
+
