@@ -1,0 +1,15 @@
+ar -cr libblasLapack.a *.o
+mpif77 -c  -O2 -cpp -fdefault-real-8 -fdefault-double-8 -std=legacy  -DMPI -DUNDERSCORE -DGLOBAL_LONG_LONG -DTIMER -I/home/ahuxford/NekML/examples/parallel_train -I/home/ahuxford/Nek5000/core -I./ -I /home/ahuxford/Nek5000/core/experimental /home/ahuxford/Nek5000/core/3rd_party/NekML.f -o obj/NekML.o
+'ext_cyl.usr' -> 'ext_cyl.f'
+mpif77  -O2 -cpp -fdefault-real-8 -fdefault-double-8 -std=legacy  -DMPI -DUNDERSCORE -DGLOBAL_LONG_LONG -DTIMER -I/home/ahuxford/NekML/examples/parallel_train -I/home/ahuxford/Nek5000/core -I./ -I /home/ahuxford/Nek5000/core/experimental  -c /home/ahuxford/NekML/examples/parallel_train/ext_cyl.f
+building libnek5000.a ... ar: `u' modifier ignored since `D' is the default (see `U')
+done
+mpif77  -O2 -cpp -fdefault-real-8 -fdefault-double-8 -std=legacy  -DMPI -DUNDERSCORE -DGLOBAL_LONG_LONG -DTIMER -I/home/ahuxford/NekML/examples/parallel_train -I/home/ahuxford/Nek5000/core -I./ -I /home/ahuxford/Nek5000/core/experimental -o nek5000 /home/ahuxford/Nek5000/core/drive.f /home/ahuxford/NekML/examples/parallel_train/ext_cyl.o libnek5000.a -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib -lpython3.6m -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions -L/home/ahuxford/Nek5000/3rd_party/blasLapack -lblasLapack -L/home/ahuxford/Nek5000/3rd_party/gslib/lib -lgs -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/ahuxford/anaconda3/lib -Wl,-rpath-link,/home/ahuxford/anaconda3/lib -L/home/ahuxford/anaconda3/lib -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/ahuxford/anaconda3/lib -Wl,-rpath-link,/home/ahuxford/anaconda3/lib -L/home/ahuxford/anaconda3/lib -Wl,--allow-multiple-definition
+
+
+#############################################################
+#                  Compilation successful!                  #
+#############################################################
+   text	   data	    bss	    dec	    hex	filename
+2035160	  24360	251742536	253802056	f20b648	nek5000
+
