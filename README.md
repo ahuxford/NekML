@@ -26,6 +26,8 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 
 5. When you run "makenek" you may need to run it up to 3 times (i.e. makenek clean, makenek, makenek, makenek) to complete the compilation of Nek5000 with NekML. There's a compilation bug I never fixed, but it'll still work. I think it's something with the makefile_usr.inc file.
 
+- p.s. I get a compilation bug when compiling with gfortran 4.8.5 regarding the c_loc procedure in forpy_mod.F90, but I think the issue doesn't exist for newer compiler versions.
+
 ## Examples
 
 `save_h5py`
