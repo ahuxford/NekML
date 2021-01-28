@@ -18,13 +18,13 @@ USR_LFLAGS+="`python3.X-config --ldflags`"
 ```
 where X corresponds to the specific Python 3 version you have installed. An example editted **makenek** file for use with Python 3.6 is located within NekML's 'files' directory.
 
-3. Copy the **forpy_mod.F90**, and **NekML.f** file from NekML's 'files' directory to your local Nek5000 installation's 'Nek5000/core/3rd_party' directory.
+3. Copy the `forpy_mod.F90`, and `NekML.f` files from NekML's 'files' directory to your local Nek5000 installation's 'Nek5000/core/3rd_party' directory.
 
-4. Whenever using NekML, a copy of the provided **makefile_usr.inc** file located in the 'files' directory and a copy of the directory 'NekML_PyMods' must both be located in the working directory you want to run Nek5000 from. For example, 'examples/save_h5py' contains **makefile_usr.inc** and the 'NekML_PyMods' directory.
+4. Whenever using NekML, a copy of the provided `makefile_usr.inc` file that is located in the 'files' directory and a copy of the directory `NekML_PyMods` must both be located in the working directory you want to run Nek5000 from. For example, 'examples/save_h5py' contains **makefile_usr.inc** and the 'NekML_PyMods' directory.
 
-- 'NekML_PyMods' and **NekML.f** are made to be customized by the user, based on the user's pythonic needs. The provided files are just placeholders to show simple examples of Nek5000 -> python transfers on the fly.
+- `NekML_PyMods` and `NekML.f` are made to be customized by the user, based on the user's pythonic needs. The provided files are just placeholders to show simple examples of Nek5000 -> python transfers on the fly.
 
-5. When you run "makenek" you may need to run it up to 3 times (i.e. makenek clean, makenek, makenek, makenek) to complete the compilation of Nek5000 with NekML. There's a compilation bug I never fixed, but it'll still work. I think it's something with the makefile_usr.inc file.
+5. To compile Nek5000 with NekML"makenek" you may need to run it up to 3 times (i.e. makenek clean, makenek, makenek, makenek) to complete the compilation of Nek5000 with NekML. There's a compilation bug I never fixed, but it'll still work. I think it's something with the makefile_usr.inc file.
 
 - p.s. I get a compilation bug when compiling with gfortran 4.8.5 regarding the c_loc procedure in forpy_mod.F90, but I think the issue doesn't exist for newer compiler versions.
 
@@ -32,6 +32,7 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 
 `save_h5py`
 - This example follows the `ext_cyl` example included with Nek5000. Here, we actively pull a velocity field on-the-fly from Nek5000 and call a Python function that writes the field to a h5 file using the h5py python module.
+- You can look at the .usr file to see how it calls the Fortran -> python functions.
 
 `serial_train`
 - This example follows the `ext_cyl` example included with Nek5000, but with an example on-the-fly training of a neural network. The goal of the network is to predict each node's y-velocity using only the local x-velocity as an input. The network is trained on-the-fly, using live simulation data from every timestep within the simulation.
