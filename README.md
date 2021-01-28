@@ -18,7 +18,7 @@ USR_LFLAGS+="`python3.X-config --ldflags`"
 ```
 where X corresponds to the specific Python 3 version you have installed. An example editted **makenek** file for use with Python 3.6 is located within NekML's 'files' directory.
 
-3. Copy the **forpy_mod.F90** file from NekML's 'files' directory to your local Nek5000 installation's 'core/3rd_party' directory.
+3. Copy the **forpy_mod.F90**, and **NekML.f** file from NekML's 'files' directory to your local Nek5000 installation's 'core/3rd_party' directory.
 
 4. Whenever using NekML, a copy of the provided **makefile_usr.inc** file that is located in NekML's 'files' directory  and a copy of the directory 'NekML_PyMods' must both be in the directory you want to run Nek5000 in. For example, 'examples/save_h5py' contains **makefile_usr.inc** and 'NekML_PyMods'.
 
