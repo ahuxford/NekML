@@ -1,8 +1,8 @@
 # NekML
 
-NekML is an efficient, Nek5000 interface for on-the-fly data transfer of Nek5000 solution data to Python-based modules. This repo was initially created for machine learning applications, hence the name: NekML. NekML is based on the application of *Forpy* (https://github.com/ylikx/forpy) but directly applied to Nek5000.
+NekML is an efficient, Nek5000 interface for on-the-fly data transfer of Nek5000 solution data to Python-based modules. This repo was initially created for machine learning applications, hence the name: NekML. 
 
-One use of the interface is on-the-fly, serial or parallel training of neural networks using live Nek5000 simulation data.
+NekML is based on the application of the Fortran-Python repository **Forpy** (https://github.com/ylikx/forpy) but directly applied to Nek5000. For further clarification and just getting started with using Forpy before applying it to Nek5000, please check out https://github.com/ylikx/forpy.
 
 Created by Aaron Huxford: ahuxford@umich.edu
 
