@@ -31,8 +31,11 @@ where X corresponds to the specific Python 3 version you have installed. An exam
 ## Examples
 
 `save_h5py`
-- This example follows the `ext_cyl` example included with Nek5000. Here, we actively pull a velocity field on-the-fly from Nek5000 and call a Python function that writes the field to a h5 file using the h5py python module.
-- You can look at the .usr file to see how it calls the Fortran -> python functions.
+- This example follows the `ext_cyl` example included with Nek5000. Here, we actively pull a velocity field on-the-fly from Nek5000 and call a Python function that writes the field to a h5 file using the h5py python module. The following steps are made when calling python functions from Nek5000:
+
+1) ext_cyl.usr's usrcheck() calls the `NekML_savevx2h5()` FORTRAN function located in NekML.f (located in Nek5000/core/3rdparty).
+2) `NekML_savevx2h5()` uses Forpy to convert data from FORTRAN -> C -> Python, then calls the Python function `saveh5py()` located in the example's NekML_PyMods/NekML.py file.
+3) `saveh5py()` saves the input array to .h5 file, using the h5py module.
 
 `serial_train`
 - This example follows the `ext_cyl` example included with Nek5000, but with an example on-the-fly training of a neural network. The goal of the network is to predict each node's y-velocity using only the local x-velocity as an input. The network is trained on-the-fly, using live simulation data from every timestep within the simulation.
