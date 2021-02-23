@@ -9,7 +9,7 @@ Created by Aaron Huxford: ahuxford@umich.edu
 ## Getting Started
 
 1. To do all the examples, you need to have Python 3.X (X = version) along with numpy, matplotlib, h5py, and pytorch modules. 
-- For ease, do not use an Anaconda environment for accessing python. It is possible, but there are no guarantees the compilation, linking, and running will work as expected. If you would like, you can try to follow the Anaconda-related instructions at https://github.com/ylikx/forpy to attempt to use an Anaconda environment.
+- For ease, **do not use an Anaconda environment**. It is possible, but there are no guarantees the compilation, linking, and running will work as expected. If you would like, you can try to follow the Anaconda-related instructions at https://github.com/ylikx/forpy to attempt to use an Anaconda environment.
 
 2. Add the following USR and USR_LFLAGS lines to your local Nek5000 installation's **makenek** file, which is located within your local 'Nek5000/bin' directory.
 ```
